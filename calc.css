@@ -1,6 +1,8 @@
 body{
-	background-color: green;
+	background-color= orange;
 }
+
+
 
 table{
 margin-left:auto;
@@ -16,7 +18,6 @@ border-radius: 5px;
 button{
 height: 60px;
 width: 70px;
-  background-color: light blue;
 }
 #opac{
 opacity: 0.25;
