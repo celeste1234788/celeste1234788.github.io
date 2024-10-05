@@ -55,6 +55,24 @@ opac.innerHTML=eval(duplicate);
 decPoint.addEventListener("click", function(){
 res.textContent += ".";
 });
+eqBtn.addEventListener("click", function(){
+(function(i, j){
+symList = [];
+for(var i=0; i<opnSyms.length; i++){
+if(res.textContent.indexOf(opnSyms[i]) > -1){
+symList.push(opnSyms[i]);
+}
+}
+if(symList.length > 0){
+try{
+res.textContent = eval(res.textContent);
+}
+catch(e){
+res.textContent = "Invalid Syntax";
+}
+}
+}(i, j));
+});
 eqBtn.addEventListener("click", function() {
 (function(i, j) {
 symList = [];
@@ -76,4 +94,12 @@ res.textContent = "Invalid Syntax";
 }
 }
 }(i, j));
+});
+var sqrtBtn = document.querySelector("#sqrt");
+sqrtBtn.addEventListener("click", function() {
+try {
+res.textContent = Math.sqrt(eval(res.textContent));
+} catch (e) {
+res.textContent = "Invalid Input";
+}
 });
